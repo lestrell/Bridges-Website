@@ -1,0 +1,161 @@
+#left-bar-header{
+  width: 100% !important;
+}
+
+@media (max-width: 768px){
+  .dropdown{
+    display: block !important;
+  }
+  /*.col-sm-9, .col-md-10, .main{
+      padding: 0px 5px !important;
+  }*/
+}
+
+@media (min-width: 768px){
+  .dropdown{
+    display: none !important;
+  }
+  /*.main {
+      padding-right: 40px !important;
+      padding-left: 40px !important;
+  }*/
+
+}
+
+@media (min-width: 1025px){
+
+  .card-img-top{
+    height: 300px !important;
+    width: 300px !important;
+  }
+
+  .col-xs-12.col-md-4{
+      width: 28.333333% !important;
+  }
+
+}
+
+
+
+/******iPad Pro*******/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation:portrait) {
+    .navbar{zoom:1.1;}
+    #left-bar-header{width: 100% !important;}
+
+    .card-img-top{
+      height: 200px !important;
+      width: 200px !important;
+    }
+    .col-xs-12.col-md-4{
+        width: 28.333333% !important;
+    }
+    .main{padding: 5px !important;}
+    .navbar{zoom:0.9;}
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation:landscape) {
+    .navbar{zoom:1.1;}
+    #left-bar-header{width: 100% !important;}
+
+}
+
+/******iPad*******/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+    #left-bar-header{width: 100% !important;}
+    .card-img-top{
+      height: 200px !important;
+      width: 200px !important;
+    }
+    .col-xs-12.col-md-4 {
+        width: 34.333333% !important;
+    }
+    .navbar{zoom:0.9;}
+    .main{
+      padding-left: 0px !important;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+    #left-bar-header{width: 100% !important;}
+    .card-img-top{
+      height: 200px !important;
+      width: 200px !important;
+    }
+    .col-xs-12.col-md-4 {
+        width: 28.333333% !important;
+    }
+    .navbar{zoom:0.9;}
+    .container{padding-left:0px !important;}
+
+}
+
+
+
+
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+
+}
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+    /* For landscape layouts only *
+    .card-img-top{
+      height: 200px !important;
+      width: 200px !important;
+    }
+    .col-xs-12.col-md-4{
+        width: 28.333333% !important;
+    }
+    .main{padding: 5px !important;}
+    .navbar{zoom:0.9;}
+}*/
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only *
+  .card-img-top{
+    height: 200px !important;
+    width: 200px !important;
+  }
+  .col-xs-12.col-md-4{
+      width: 28.333333% !important;
+  }
+  /*.main{padding: 5px !important;}*
+  #left-bar-header{width: 100% !important;}
+  .navbar{zoom:0.9;}
+}*/
+
+
+
+
+.row {
+  margin:0px auto !important;
+}
+
+/**
+ * Footer Styles
+ */
+
+
+/**Push footer to bottom**/
+.row-87{
+  min-height: 87.5vh !important;
+}
+
+
+#navbar{
+  margin-right: 50px;
+  /*float: left !important;*/
+}
+
+html, body{overflow-x: hidden !important;}
+/**{overflow-x: hidden !important;}*/
+
+/* Scrollbar */
+
+::-webkit-scrollbar{width: 10px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 0;}
+::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
+
+::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}

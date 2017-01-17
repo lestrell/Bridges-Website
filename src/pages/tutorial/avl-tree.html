@@ -1,0 +1,88 @@
+</br>
+<h2 class="sub-header">Bridges - Hello World Visualization Tutorial</h2>
+<div class="m-t-md">
+  <!-- First row -->
+  <div class="">
+
+
+    <nav class="nav-tutorial">
+      <a href="#/overview">Overview</a>
+
+      <span>
+        <a>Lists</a>
+        <div class="dropdown-contents">
+          <a href="#/singly-list">Singly Linked</a>
+          <a href="#/doubly-list">Doubly Linked</a>
+        </div>
+      </span>
+
+      <span>
+        <a>Trees</a>
+        <div class="dropdown-contents">
+          <a href="#/binary-tree">Binary Tree</a>
+          <a href="#/binary-search-tree">Binary Search Tree</a>
+          <a href="#/avl-tree">AVL Tree</a>
+        </div>
+      </span>
+
+      <a href="#/graph">Graphs</a>
+
+      <a href="#/visualizations">Visualizations</a>
+    </nav>
+</br>
+</br>
+<div class="main-tutorial">
+AVLTreeElement&lt;K,E&gt; implements an <i> AVL Tree element</i> in BRIDGES and
+is inherited from BSTElement&ltE&gt;.
+<br><br><img width="200em" src="./images/avlelement-cd.png"><br><br>
+<h2>How does the AVLTreeElement&lt;K,E&gt; work?</h2>
+<p>
+AVLTreeElement&lt;K,E&gt; is a container that has two links that point
+to two child AVLTreeElements. It uses the same conventions as the
+BSTElement&ltE&gt;.
+<br><br>
+AVLTreeElement&lt;K,E&gt; is nearly identical to BSTElement&lt;K,E&gt;, however,
+it is to be used for building AVL trees, a type of balanced binary search trees
+(Other examples of balanced search trees include Red-Black Trees, 2-3 Trees).
+AVL tree inherits all data members and methods of a binary search tree, but
+includes two additional attributes: a <i>balance factor</i>, which measures the
+difference between the heights of its left and right subtrees, and
+<i>height</i>, that keeps track of the height of the tree at the node.
+<p>
+An example AVL tree is shown below (and used in the live example further down)
+with key values and balance factors(in parens):
+
+<br><br><img width="300em" src="./images/avl_examp.png"><br><br>
+<p>
+<b>To Do: Java Bridges example  is updated -
+need to replace the C++ example (corresponding to the Java example), then need
+to get real live examples working for both</b>
+<p>
+<hr>
+
+<h2>AVL Tree - BRIDGES Example</h2>
+<div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+</div>
+<div class="tabContents">
+    <div id="Java" w3-include-html="./Java_AVL.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_BST.html"></div>
+</div>
+
+<h3>Bridges Visualization</h3>
+<ul>
+    <li>Once all your code is in order, run your program.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+</ul>
+<div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/4/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes -
+        <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+</div>
+<p>Well done! You’ve just created your fourth Bridges project!</p>
+</div>

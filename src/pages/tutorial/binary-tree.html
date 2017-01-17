@@ -1,0 +1,88 @@
+</br>
+<h2 class="sub-header">Bridges - Hello World Visualization Tutorial</h2>
+<div class="m-t-md">
+  <!-- First row -->
+  <div class="">
+
+
+    <nav class="nav-tutorial">
+      <a href="#/overview">Overview</a>
+
+      <span>
+        <a>Lists</a>
+        <div class="dropdown-contents">
+          <a href="#/singly-list">Singly Linked</a>
+          <a href="#/doubly-list">Doubly Linked</a>
+        </div>
+      </span>
+
+      <span>
+        <a>Trees</a>
+        <div class="dropdown-contents">
+          <a href="#/binary-tree">Binary Tree</a>
+          <a href="#/binary-search-tree">Binary Search Tree</a>
+          <a href="#/avl-tree">AVL Tree</a>
+        </div>
+      </span>
+
+      <a href="#/graph">Graphs</a>
+
+      <a href="#/visualizations">Visualizations</a>
+    </nav>
+</br>
+</br>
+  <div class="main-tutorial">
+TreeElement&lt;E&gt; implements a <i>binary tree element</i> in BRIDGES
+and is inherited from Element&lt;E&gt;
+<br><br><img width="175em" src="./images/btelement-cd.png"><br><br>
+<h2>How does the TreeElement&lt;E&gt; work?</h2>
+<p>
+TreeElement&lt;E&gt; is another type of container that has two links
+pointing to its two children, also binary tree elements. By convention,
+these two links are called "left" and "right and the top of the tree is
+referred to as the "root".
+<br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
+In the example above, Root has two links, so calling Root.getLeft() will
+return the TreeElement T1 and calling Root.getRight() will return the
+TreeElement T2.
+<br/><br/>
+Note that there is no pointer from T1 or any other element back to its root.
+</p>
+
+<h2>How does a TreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
+<p>
+Structurally, DLelement&lt;E&gt;  and TreeElement&lt;E&gt; are similar with 2 emanating links, but they are used in very different data structures. In a doubly
+linked list, the links point to the immediately following and previous
+element, while in the binary tree they point to its two children(recursively,
+as can be seen in the above example).
+
+</p>
+
+  <hr/>
+
+<h2>TreeElement - BRIDGES Example</h2>
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./include/Java_BTree.html"></div>
+    <div id="C++"  w3-include-html="./include/Cpp_BTree.html"></div>
+  </div>
+
+  <h3>Bridges Visualization</h3>
+  <ul>
+    <li>Once all your code is in order, run your program.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+  </ul>
+  <div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/3/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes -
+        <a href="http://bridges-cs.herokuapp.com/assignments/3/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+  </div>
+  <p>Well done! You’ve just created your third Bridges project!</p>
+</div>
