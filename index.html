@@ -2,6 +2,8 @@
 <html>
 
   <head>
+	<!-- Set the base href -->
+	<script> document.write('<base href="' + document.location + '" />'); </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,29 +85,30 @@
           <!-- <a class="navbar-brand" id="navbar-brand-desktop" href="index.html">BRIDGES</a> -->
 
           <ul class="nav navbar-nav navbar-right">
-            <li data-title="Assignments" id="assignments"><a href="#/assignments">Assignments</a></li>
-            <li data-title="Evaluation Data" id="bridges-eval"><a href="#/bridges-eval">Evaluation Data</a></li>
-            <li data-title="Evaluation Datasets" id="datasets"><a href="#/datasets">Datasets</a></li>
-            <li data-title="BRIDGES Team" id="bridges-team"><a href="#/bridges-team">BRIDGES Team</a></li>
-            <li data-title="BRIDGES Design" id="bridges-design"><a href="#/bridges-design">BRIDGES Design</a></li>
-            <li><a href="http://bridges-cs.herokuapp.com/login"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
+              <li data-title="Welcome to BRIDGES" id="bridges-home"><a href="#/">Home</a></li>
+              <li data-title="Bridges: Getting Started" id="bridges-setup"><a href="#/bridges-setup">Get Started!</a></li>
+              <li data-title="User Guide/Tutorials" id="tutorial"><a href= "#/tutorial">Tutorials</a></li>
+              <li data-title="Assignments" id="assignments"><a href="#/assignments">Assignments</a></li>
+              <li data-title="Evaluation Data" id="bridges-eval"><a href="#/bridges-eval">Evaluation Data</a></li>
+              <li data-title="Evaluation Datasets" id="datasets"><a href="#/datasets">Datasets</a></li>
+              <li data-title="BRIDGES Team" id="bridges-team"><a href="#/bridges-team">Team</a></li>
+              <li data-title="BRIDGES Design" id="bridges-design"><a href="#/bridges-design">Design</a></li>
+              <li><a href="http://bridges-cs.herokuapp.com/login"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Bridges[Java][JAR]]</a></li>
-                  <li><a href="#">BRIDGES[C++][Zip]]</a></li>
+                  <li><a href="./../sw/bridges-2.2.0.jar">Bridges[Java][JAR]] </a></li>
+                  <li><a href="./../sw/bridges-cxx-2.2.0.zip">BRIDGES[C++][Zip]] </a></li>
                 </ul>
               </li>
 
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="">BRIDGES: Getting Started</a></li>
-                  <li><a href="">User Guide/Tutorials</a></li>
-                  <li><a href="">Java API</a></li>
-                  <li><a href="">C++ API</a></li>
+                  <li><a href="http://bridgesuncc.github.io/doc/java-api/current/html/index.html">Java API</a></li>
+              		<li><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/index.html">C++ API</a></li>
                 </ul>
               </li>
 
@@ -161,7 +164,7 @@
 
         <div id="left-bar" class="col-sm-3 col-md-2 sidebar">
 
-          <a href="./index.html"><img id="left-bar-header" src="./img/bridges_logo.png"></img></a>
+          <a href="#/"><img id="left-bar-header" src="./img/bridges_logo.png"></img></a>
 
           <h4><u>Download</u></h4>
           <ul class="nav nav-sidebar">
@@ -171,8 +174,6 @@
 
           <h4><u>Documentation</u></h4>
           <ul class="nav nav-sidebar">
-            <li data-title="Bridges: Getting Started" id="bridges-setup"><a href="#/bridges-setup">BRIDGES: Getting Started </a></li>
-            <li data-title="User Guide/Tutorials" id="tutorial"><a href= "#/tutorial"> User Guide/Tutorials</a></li>
         		<li><a href="http://bridgesuncc.github.io/doc/java-api/current/html/index.html">Java API</a></li>
         		<li><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/index.html">C++ API</a></li>
           </ul>
@@ -220,16 +221,73 @@
 
 
 
-    				<div  style="min-height:87.5vh;" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<div  style="min-height:87.5vh;" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-                  <my-app>Loading...</my-app>
-                  <footer>All rights reserved, Copyright @2017, The University of North Carolinat at Charlotte</footer>
+				<!--- Tutorial Toolbar --->
+	<div id="tutorial-navbar" style="display:none">
+		<br>
+		<h2 class="sub-header">Bridges - Hello World Visualization Tutorial</h2>
+		<div class="m-t-md">
+			<!-- First row -->
+			<div class="">
 
-            </div>
+
+				<nav class="nav-tutorial">
+					<a id="overview" href="#/tutorial">Overview</a>
+					<span>
+				  <a id="arrays">Arrays</a>
+				  <div class="dropdown-contents">
+					<a id="array" href="#/tutorial/arrays/array">Array</a>
+					<a id="2darray" href="#/tutorial/arrays/2darray">2D Array</a>
+					<a id="3darray" href="#/tutorial/arrays/3darray">3D Array</a>
+				  </div>
+				</span>
+					<span>
+				  <a id="lists">Lists</a>
+				  <div class="dropdown-contents">
+					<a id="singly-list" href="#/tutorial/lists/singly-list">Singly Linked</a>
+					<a id="doubly-list" href="#/tutorial/lists/doubly-list">Doubly Linked</a>
+					<a id="circular-singly-list" href="#/tutorial/lists/circular-singly-list">Circular Singly Linked</a>
+					<a id="circular-doubly-list" href="#/tutorial/lists/circular-doubly-list">Circular Doubly Linked</a>
+				  </div>
+				</span>
+
+				<span>
+				  <a id="trees">Trees</a>
+				  <div class="dropdown-contents">
+					<a id="binary-tree" href="#/tutorial/trees/binary-tree">Binary Tree</a>
+					<a id="binary-search-tree" href="#/tutorial/trees/binary-search-tree">Binary Search Tree</a>
+					<a id="avl-tree" href="#/tutorial/trees/avl-tree">AVL Tree</a>
+				  </div>
+				</span>
+
+				<a id="graph" href="#/tutorial/graph">Graphs</a>
+
+				<a id="visualizations" href="#/tutorial/visualizations">Visualizations</a>
+				</nav>
+	</div>
+	</div>
+	<br>
+	<br>
+	</div>
 
 
-        </div>
-    </div>
+						  <my-app>Loading...</my-app>
+              <br>
+						  <div class="bridges-footer">All rights reserved, Copyright @2017, The University of North Carolinat at Charlotte</div>
+
+					</div>
+
+
+				</div>
+
+				</div>
+
+
+				</div>
+
+	<!--- Tutorial Toolbar --->
+
 
 
     <!-- Bootstrap core JavaScript
@@ -242,7 +300,7 @@
     <script src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-		<script src="js/lib/w3data.js"></script>
+	<!--<script src="js/lib/w3data.js"></script>-->
 		<script src="js/bridges.js"></script>
   </body>
 

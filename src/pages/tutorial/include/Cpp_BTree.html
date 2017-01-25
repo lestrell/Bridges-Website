@@ -32,11 +32,11 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     </code>
   <li>Now link the TreeElements together</li>
     <code>
-      e0.setLeft(&e1);
-      e0.setRight(&e2);
+      e0.setLeft(&e1;);
+      e0.setRight(&e2;);
     </code>
   <li>Now we pass the root of the  binary tree to BRIDGES</li>
-    <code>Bridges::setDataStructure(&e0);</code>
+    <code>Bridges::setDataStructure(&e0;);</code>
   <li>Finnaly we call the visualize function</li>
     <code>Bridges::visualize();</code>
 </ul>
@@ -48,7 +48,7 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     using namespace bridges;
 
     int main()
-    {
+    &#123;
         //create the Bridges object
         Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",3);
         
@@ -58,13 +58,13 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
         TreeElement&lt;int&gt; e2(0,"World");
         
         //link elements
-        e0.setLeft(&e1);
-        e0.setRight(&e2);
+        e0.setLeft(&e1;);
+        e0.setRight(&e2;);
         
         //pass first element of data structure
-        Bridges::setDataStructure(&e0);
+        Bridges::setDataStructure(&e0;);
         
         //visualize data structure
         Bridges::visualize();
-    }
+    &#125;
   </code>

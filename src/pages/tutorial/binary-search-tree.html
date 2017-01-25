@@ -1,119 +1,77 @@
-</br>
-<h2 class="sub-header">Bridges - Hello World Visualization Tutorial</h2>
 <div class="m-t-md">
-  <!-- First row -->
-  <div class="">
+    <!-- First row -->
+    <div class="">
 
+        <div class="main-tutorial">
+            BSTElement&lt;K,E&gt; implements a <i> binary search tree element </i> and is inherited from TreeElement&lt;K,E&gt;
+            <br><br><img width="175em" src="./images/bstelement-cd.png"><br><br>
+            <h2>How does the BSTElement&lt;K,E&gt; work?</h2>
+            <p>
+                BSTElement&lt;K,E&gt; is a type of container that has two links that point to two child BSTElements. It uses the same conventions as the TreeElement&lt;E&gt;.
+                <br><br> At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a regular Binary Tree Element. The fundamental difference between the two classes is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
+                and holds an additional piece of data, the generic parameter K, called the "key". The key is used to enforce an ordering on the tree structure independent of the element that is being held.
+                <br><br> A typical example would be a binary search tree where all of the keys of the left child are smaller than the keys of the right child.
+                <br/><br/><img width="600em" src="./images/BSTElement.png" /><br/><br/> Notice that the key for BST1 is smaller than the key for the root so it's to the left of the root. Also notice that the key for BST3 is smaller than the key for BST2,
+                but larger than the key for the root. So BST3 sits on the left subtree of BST2, but in the right subtree of the Root.
+                <p>
 
-    <nav class="nav-tutorial">
-      <a href="#/overview">Overview</a>
+                    <hr>
 
-      <span>
-        <a>Lists</a>
-        <div class="dropdown-contents">
-          <a href="#/singly-list">Singly Linked</a>
-          <a href="#/doubly-list">Doubly Linked</a>
-        </div>
-      </span>
+                    <h2>BSTElement - Hello World</h2>
+                    <div class="tabs">
+                        <div onclick="displayCode('Java',this)">Java</div>
+                        <div onclick="displayCode('cpp',this)">C++</div>
+                    </div>
+                    <div class="tabContents">
+                        <div id="Java" class="tab">
+                            <h3>Create a new .java file</h3>
 
-      <span>
-        <a>Trees</a>
-        <div class="dropdown-contents">
-          <a href="#/binary-tree">Binary Tree</a>
-          <a href="#/binary-search-tree">Binary Search Tree</a>
-          <a href="#/avl-tree">AVL Tree</a>
-        </div>
-      </span>
-
-      <a href="#/graph">Graphs</a>
-
-      <a href="#/visualizations">Visualizations</a>
-    </nav>
-</br>
-</br>
-  <div class="main-tutorial">
-  BSTElement&lt;K,E&gt; implements a <i> binary search tree element </i> and is
-  inherited from TreeElement&lt;K,E&gt;
-  <br><br><img width="175em" src="./images/bstelement-cd.png"><br><br>
-  <h2>How does the BSTElement&lt;K,E&gt; work?</h2>
-  <p>
-  BSTElement&lt;K,E&gt; is a type of container that has two links that point
-  to two child BSTElements. It uses the same conventions as the
-  TreeElement&ltE&gt;.
-  <br><br>
-  At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a
-  regular Binary Tree Element. The fundamental difference between the two classes
-  is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
-  and holds an additional piece of data, the generic parameter K,
-  called the "key".  The key is used to enforce an ordering on the tree
-  structure independent of the element that is being held.
-  <br><br>
-  A typical example would be a binary search tree where all of the keys of
-  the left child are smaller than the keys of the right child.
-  <br/><br/><img width="600em" src="./BSTElement.png"/><br/><br/>
-  Notice that the key for BST1 is smaller than the key for the root so it's to
-  the left of the root. Also notice that the key for BST3 is smaller than
-  the key for BST2, but larger than the key for the root. So BST3 sits on
-  the left subtree of BST2, but in the right subtree of the Root.
-  <p>
-
-  <hr>
-
-  <h2>BSTElement - Hello World</h2>
-  <div class="tabs">
-      <div onclick="displayCode('Java',this)">Java</div>
-      <div onclick="displayCode('cpp',this)" >C++</div>
-  </div>
-  <div class="tabContents">
-      <div id="Java" class="tab">
-        <h3>Create a new .java file</h3>
-
-        <h3>Imports</h3>
-        <ul>
-          <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
-          <li>In your .java file, enter the following code snippets:</li>
-            <code>
+                            <h3>Imports</h3>
+                            <ul>
+                                <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+                                <li>In your .java file, enter the following code snippets:</li>
+                                <code>
               import bridges.connect.Bridges;
               import bridges.base.BSTElement;
             </code>
-        </ul>
+                            </ul>
 
-        <h3>Main Exception</h3>
-        <ul>
-          <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
-          <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-            <code>public static void main(String[] args) throws Exception</code>
-        </ul>
+                            <h3>Main Exception</h3>
+                            <ul>
+                                <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+                                <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+                                <code>public static void main(String[] args) throws Exception</code>
+                            </ul>
 
-        <h3>Inside our Main</h3>
-        <ul>
-          <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-            <code>Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
-          <li>Then we can create our TreeElements</li>
-            <code>
+                            <h3>Inside our Main</h3>
+                            <ul>
+                                <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+                                <code>Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+                                <li>Then we can create our TreeElements</li>
+                                <code>
               BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
               BSTElement&lt;Integer,String&gt; e1 = new BSTElement&lt;&gt;("Hello",-1, "");
               BSTElement&lt;Integer,String&gt; e2 = new BSTElement&lt;&gt;("World",1, "");
             </code>
-        <li>Now link the BSTElements together</li>
-            <code>
+                                <li>Now link the BSTElements together</li>
+                                <code>
               e0.setLeft(e1);
               e0.setRight(e2);
             </code>
-          <li>Now we pass the root of our Binary Search Tree to Bridges</li>
-            <code>bridges.setDataStructure(e0);</code>
-          <li>Finnaly we visualize the tree </li>
-            <code>bridges.visualize();</code>
-        </ul>
-        <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-          <code>
+                                <li>Now we pass the root of our Binary Search Tree to Bridges</li>
+                                <code>bridges.setDataStructure(e0);</code>
+                                <li>Finnaly we visualize the tree </li>
+                                <code>bridges.visualize();</code>
+                            </ul>
+                            <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+                            <code>
             import bridges.connect.Bridges;
             import bridges.base.BSTElement;
 
             public class HelloWorld
-            {
+            &#123;
                 public static void main(String[] args) throws Exception
-                {
+                &#123;
                     //create the Bridges object
                     Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
 
@@ -131,63 +89,61 @@
 
                     //visualize data structure
                     bridges.visualize();
-                }
-            }
+                &#125;
+            &#125;
           </code>
 
 
-      </div>
-      <div id="cpp" style="display:none;"class="tab">
-        <h3>Create a new .cpp file</h3>
+                        </div>
+                        <div id="cpp" style="display:none;" class="tab">
+                            <h3>Create a new .cpp file</h3>
 
-        <h3>Includes</h3>
-        <ul>
-          <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
-          <li>In your .cpp file, enter the following code snippets:</li>
-            <code>
+                            <h3>Includes</h3>
+                            <ul>
+                                <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
+                                <li>In your .cpp file, enter the following code snippets:</li>
+                                <code>
                 #include "BSTElement.h"
                 #include "Bridges.h"
             </code>
-        </ul>
+                            </ul>
 
-        <h3>Namespace</h3>
-        <ul>
-          <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
-          <li>In your .cpp file, enter the following code snippet:</li>
-            <code>using namespace bridges;</code>
-        </ul>
+                            <h3>Namespace</h3>
+                            <ul>
+                                <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
+                                <li>In your .cpp file, enter the following code snippet:</li>
+                                <code>using namespace bridges;</code>
+                            </ul>
 
-        <h3>Inside our Main</h3>
-        <ul>
-          <li>First we need to initialize our Bridges Credentials</li>
-            <code>Bridges::initialize(4, "YOUR_API_KEY","YOUR_USER_ID",4);</code>
-        Note that the above 2 parameters  need to be replaced by your BRIDGES
-        credentials.
-          <li>Then we can create our BSTElements</li>
-            <code>
+                            <h3>Inside our Main</h3>
+                            <ul>
+                                <li>First we need to initialize our Bridges Credentials</li>
+                                <code>Bridges::initialize(4, "YOUR_API_KEY","YOUR_USER_ID",4);</code> Note that the above 2 parameters need to be replaced by your BRIDGES credentials.
+                                <li>Then we can create our BSTElements</li>
+                                <code>
               BSTElement&lt;int,string&gt; e0(0,"","");
               BSTElement&lt;int,string&gt; e1(-1,"","Hello");
               BSTElement&lt;int,string&gt; e2(1,"","World");
             </code>
-          <li>Now link the TreeElements together</li>
-            <code>
-              e0.setLeft(&e1);
-              e0.setRight(&e2);
+                                <li>Now link the TreeElements together</li>
+                                <code>
+              e0.setLeft(&e1;);
+              e0.setRight(&e2;);
             </code>
-          <li>Now we pass the first element of our datastruture to Bridges</li>
-            <code>Bridges::setDataStructure(&e0);</code>
-          <li>Finnaly we call the visualize function</li>
-            <code>Bridges::visualize();</code>
-        </ul>
-        <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-          <code>
+                                <li>Now we pass the first element of our datastruture to Bridges</li>
+                                <code>Bridges::setDataStructure(&e0;);</code>
+                                <li>Finnaly we call the visualize function</li>
+                                <code>Bridges::visualize();</code>
+                            </ul>
+                            <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+                            <code>
             #include "BSTElement.h"
             #include "Bridges.h"
 
             using namespace bridges;
 
             int main()
-            {
+            &#123;
                 //create the Bridges object
                 Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",4);
 
@@ -197,52 +153,52 @@
                 BSTElement&lt;int,string&gt; e2(1,"","World");
 
                 //link elements
-                e0.setLeft(&e1);
-                e0.setRight(&e2);
+                e0.setLeft(&e1;);
+                e0.setRight(&e2;);
 
                 //pass first element of data structure
-                Bridges::setDataStructure(&e0);
+                Bridges::setDataStructure(&e0;);
 
                 //visualize data structure
                 Bridges::visualize();
-            }
+            &#125;
           </code>
 
 
-      </div>
-  </div>
+                        </div>
+                    </div>
 
-  <h3>Bridges Visualization</h3>
-  <ul>
-      <li>Once all your code is in order, run your program.</li>
-      <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
-      <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
-      <li>It should look something like this:</li>
-  </ul>
-  </br>
-  <div class="iframe-wrapper">
-      <iframe id="my-iframe" src="http://bridges-cs.herokuapp.com/assignments/4/bridges_public" scrolling="no">
+                    <h3>Bridges Visualization</h3>
+                    <ul>
+                        <li>Once all your code is in order, run your program.</li>
+                        <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+                        <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+                        <li>It should look something like this:</li>
+                    </ul>
+                    <br>
+                    <div class="iframe-wrapper">
+                        <iframe id="my-iframe" src="http://bridges-cs.herokuapp.com/assignments/4/bridges_public" scrolling="no">
         <p>Sorry, your browser doesn't seem to support iframes -
           <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_public">Frame Link</a>
         </p>
       </iframe>
-      <script>
-        // var $iframeContents = $("#my-iframe").contents().find(".navbar").css("display","none");
+                        <script>
+                            // var $iframeContents = $("#my-iframe").contents().find(".navbar").css("display","none");
 
-        // $("#my-iframe").load(function(){
-        //
-        //   window.setTimeout(function(){
-        //     $(".navbar").css("display","none")
-        //
-        //   },1000);
-        // //   $("#my-iframe").contents().find(".navbar").css("display","none")
-        // //   // var $iFrameContents = $("#my-iframe").contents();
-        // //   // var $entryContent = $iFrameContents.find(".assignmentContainer");
-        // //   // $iFrameContents.find('html').replaceWith($entryContent);
-        // });
-      </script>
-  </div>
-  <p>Well done! You’ve just created your fourth Bridges project!</p>
-</div>
-</div>
+                            // $("#my-iframe").load(function()&#123;
+                            //
+                            //   window.setTimeout(function()&#123;
+                            //     $(".navbar").css("display","none")
+                            //
+                            //   &#125;,1000);
+                            // //   $("#my-iframe").contents().find(".navbar").css("display","none")
+                            // //   // var $iFrameContents = $("#my-iframe").contents();
+                            // //   // var $entryContent = $iFrameContents.find(".assignmentContainer");
+                            // //   // $iFrameContents.find('html').replaceWith($entryContent);
+                            // &#125;);
+                        </script>
+                    </div>
+                    <p>Well done! You’ve just created your fourth Bridges project!</p>
+        </div>
+    </div>
 </div>

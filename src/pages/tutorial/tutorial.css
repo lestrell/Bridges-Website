@@ -100,7 +100,13 @@ body > *:not(script)
 	float:left;
 	background-color: #3498db;
 }
-.nav-tutorial > *:hover {background-color: #2387ca;}
+.nav-tutorial .active{
+  background-color: #2387ca !important;
+	color:white !important;
+	text-decoration: none !important;
+}
+.nav-tutorial > *:hover {background-color: #2387ca;color:white !important;text-decoration: none !important;}
+.nav-tutorial a:hover{text-decoration: none !important;color:white !important;}
 .nav-tutorial *.dropdown-contents
 {
 	display: none;
@@ -115,10 +121,10 @@ body > *:not(script)
 }
 
 /* Highlights drop menu options lighter blue on hover */
-.nav-tutorial *.dropdown-contents *:hover {background-color: #45a9ec}
+.nav-tutorial *.dropdown-contents *:hover {background-color: #45a9ec;color:white;text-decoration: none !important;}
 
 /* Displays drop menu options on hover */
-.nav-tutorial > *:hover .dropdown-contents{display: block;}
+.nav-tutorial > *:hover .dropdown-contents{display: block;color:white;text-decoration: none !important;}
 
 
 
@@ -181,7 +187,7 @@ body > *:not(script)
 .main-tutorial code
 {
 	display: block;
-  white-space:pre;
+  white-space:pre !important;
 	border: 1px solid #ddd;
 	background-color: #eef;
 	margin-bottom: 20px;

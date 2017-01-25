@@ -9,6 +9,8 @@ System.config({
   map: {
     app: "./src"
   },
+  defaultJSExtensions: true,
+  baseURL: '/',
   //packages defines our app package
   packages: {
     app: {

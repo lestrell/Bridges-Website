@@ -1,66 +1,189 @@
-</br>
-<h2 class="sub-header">Bridges - Hello World Visualization Tutorial</h2>
 <div class="m-t-md">
   <!-- First row -->
   <div class="">
 
-
-    <nav class="nav-tutorial">
-      <a href="#/overview">Overview</a>
-
-      <span>
-        <a>Lists</a>
-        <div class="dropdown-contents">
-          <a href="#/singly-list">Singly Linked</a>
-          <a href="#/doubly-list">Doubly Linked</a>
-        </div>
-      </span>
-
-      <span>
-        <a>Trees</a>
-        <div class="dropdown-contents">
-          <a href="#/binary-tree">Binary Tree</a>
-          <a href="#/binary-search-tree">Binary Search Tree</a>
-          <a href="#/avl-tree">AVL Tree</a>
-        </div>
-      </span>
-
-      <a href="#/graph">Graphs</a>
-
-      <a href="#/visualizations">Visualizations</a>
-    </nav>
-</br>
-</br>
   <div class="main-tutorial">
-DLelement&lt;E&gt; implements a <i>doubly linked list</i> in BRIDGES and is
-inherited from Element&lt;E&gt;
+CircDLelement&lt;E&gt; implements a <i>circular doubly linked list</i> in BRIDGES and is
+inherited from DElement&lt;E&gt;
 <br><br><img width="175em" src="./images/dlelement-cd.png"><br><br>
-<h2>How does the DLelement&lt;E&gt; work?</h2>
+<h2>How does the CircDLelement&lt;E&gt; work?</h2>
 <p>
-DLelement&lt;E&gt; stands for Doubly Linked Element, and is a container
+CircDLelement&lt;E&gt; stands for Circular Doubly Linked Element, and is a container
 that has two links,  pointing to two other doubly linked elements. So
-a DLelement&lt;E&gt; “knows” who
+a CircDLelement&lt;E&gt; “knows” who
 it’s pointing at, AND it knows who pointed at it.
-<br/><br/><img width="600em" src="./DLelement.png"/><br/><br/>
-In this example, calling getNext() on DLelement2 will return DLelement3.
-Calling getPrev() on DLelement2 will return DLelement1. DLelement3 does not
-have a next pointer pointing to another DLelement so calling getNext() on
-DLelement3 will return NULL, indicating the end of the linked elements.
+<br/><br/><img width="600em" src="./images/svg/cdl.svg"/><br/><br/>
+In this example, calling getNext() on CircDLelement2 will return CircDLelement3.
+Calling getPrev() on CircDLelement2 will return CircDLelement1. CircDLelement3 points to CircDLelement1, and CircDLelement1 points to CircDLelement3.
 <br><br>
-Notice that, since DLelement&lt;E&gt; has a getPrev() method, they can move
+Notice that, since CircDLelement&lt;E&gt; has a getPrev() method, they can move
 forwards AND backwards through the linked elements.
 <p>
 
 <hr/>
 
-<h2>DLelement - BRIDGES Example</h2>
+<h2>CircDLelement - BRIDGES Example</h2>
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('C++',this)" >C++</div>
+    <div onclick="displayCode('cpp',this)" >C++</div>
   </div>
   <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_DLL.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_DLL.html"></div>
+    <div id="Java" class="tab">
+      <h3>Create a new .java file</h3>
+
+      <h3>Imports</h3>
+      <ul>
+        <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+        <li>In your .java file, enter the following code snippets:</li>
+          <code>
+            import bridges.connect.Bridges;
+            import bridges.base.DLelement;
+          </code>
+      </ul>
+
+      <h3>Main Exception</h3>
+        <ul>
+          <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+          <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+            <code>public static void main(String[] args) throws Exception</code>
+        </ul>
+
+      <h3>Inside our Main</h3>
+      <ul>
+        <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+      <p>
+      	Note that you must replace the above strings with your BRIDGES credentials.
+      <p>
+        <li>Then we can create our DLelements</li>
+          <code>
+            DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
+            DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
+            DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+          </code>
+        <li>Now link the DLelements together</li>
+          <code>
+            e0.setNext(e1);
+            e1.setNext(e2);
+            e2.setPrev(e1);
+            e1.setPrev(e0);
+          </code>
+        <li>Now we pass the first element of our datastruture to Bridges</li>
+          <code>bridge.setDataStructure(e0);</code>
+        <li>Finnaly we call the visualize function</li>
+          <code>bridge.visualize();</code>
+      </ul>
+      <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+        <code>
+          import bridges.connect.Bridges;
+          import bridges.base.DLelement;
+
+          public class HelloWorld
+          &#123;
+              public static void main(String[] args) throws Exception
+              &#123;
+                  //create the Bridges object
+                  Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
+
+                  //create elements
+                  DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
+                  DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
+                  DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+
+                  //link elements
+                  e0.setNext(e1);
+                  e1.setNext(e2);
+                  e2.setPrev(e1);
+                  e1.setPrev(e0);
+
+                  //pass first element of data structure
+                  bridge.setDataStructure(e0);
+
+                  //visualize data structure
+                  bridge.visualize();
+              &#125;
+          &#125;
+        </code>
+
+    </div>
+
+    <div id="cpp" style="display:none;"class="tab">
+      <h3>Create a new .cpp file</h3>
+
+      <h3>Includes</h3>
+      <ul>
+        <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
+        <li>In your .cpp file, enter the following code snippets:</li>
+          <code>
+            #include "DLelement.h"
+            #include "Bridges.h"
+          </code>
+      </ul>
+
+      <h3>Namespace</h3>
+      <ul>
+        <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
+        <li>In your .cpp file, enter the following code snippet:</li>
+          <code>using namespace bridges;</code>
+      </ul>
+
+      <h3>Inside our Main</h3>
+      <ul>
+        <li>First we need to initialize our Bridges Credentials</li>
+          <code>Bridges::initialize(2, "YOUR_API_KEY","YOUR_USER_ID");</code>
+      <p>
+      Note that you must  replace the two strings above with your BRIDGES credentials.
+      <p>
+        <li>Then we can create our DLelements</li>
+          <code>
+            DLelement&lt;int&gt; e0(0,"Hello");
+            DLelement&lt;int&gt; e1(0,"World");
+            DLelement&lt;int&gt; e2(0, "!");
+          </code>
+        <li>Now link the DLelements together</li>
+          <code>
+            e0.setNext(&e1;);
+            e1.setNext(&e2;);
+            e2.setPrev(&e1;);
+            e1.setPrev(&e0;);
+          </code>
+        <li>Now we pass the first element of the doubly linked list to Bridges</li>
+          <code>Bridges::setDataStructure(&e0;);</code>
+        <li>Finnaly we call the visualize function</li>
+          <code>Bridges::visualize();</code>
+      </ul>
+      <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+        <code>
+          #include "DLelement.h"
+          #include "Bridges.h"
+
+          using namespace bridges;
+
+          int main()
+          &#123;
+              //create the Bridges object
+              Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);
+
+              //create elements
+              DLelement&lt;int&gt; e0(0,"Hello");
+              DLelement&lt;int&gt; e1(0,"World");
+              DLelement&lt;int&gt; e2(0, "!");
+
+              //link elements
+              e0.setNext(&e1;);
+              e1.setNext(&e2;);
+              e2.setPrev(&e1;);
+              e1.setPrev(&e0;);
+
+              //pass first element of data structure
+              Bridges::setDataStructure(&e0;);
+
+              //visualize data structure
+              Bridges::visualize();
+          &#125;
+        </code>
+
+    </div>
   </div>
 
 <h3>Bridges Visualization</h3>
@@ -80,4 +203,6 @@ forwards AND backwards through the linked elements.
     </iframe>
   </div>
   <p>Well done! You’ve just created your second Bridges project!</p>
+</div>
+</div>
 </div>

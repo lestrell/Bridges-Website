@@ -32,11 +32,11 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     </code>
   <li>Now link the SLelements together</li>
     <code>
-      e0.setNext(&e1);
-      e1.setNext(&e2);
+      e0.setNext(&e1;);
+      e1.setNext(&e2;);
     </code>
   <li>Now we pass the first element of our singly linked list to Bridges</li>
-    <code>Bridges::setDataStructure(&e0);</code>
+    <code>Bridges::setDataStructure(&e0;);</code>
   <li>Finnaly we call the visualize function</li>
     <code>Bridges::visualize();</code>
 </ul>
@@ -48,7 +48,7 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     using namespace bridges;
   
     int main()
-    {
+    &#123;
         //create the Bridges object
         Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",1);
         
@@ -58,13 +58,13 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
         SLelement&lt;int&gt; e2(0,"!");
         
         //link elements
-        e0.setNext(&e1);
-        e1.setNext(&e2);
+        e0.setNext(&e1;);
+        e1.setNext(&e2;);
         
         //pass first element of data structure
-        Bridges::setDataStructure(&e0);
+        Bridges::setDataStructure(&e0;);
         
         //visualize data structure
         Bridges::visualize();
-    }
+    &#125;
   </code>

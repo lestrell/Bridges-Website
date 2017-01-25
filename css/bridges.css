@@ -1,9 +1,21 @@
+.bridges-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
 #left-bar-header{
   width: 100% !important;
 }
 
 @media (max-width: 768px){
   .dropdown{
+    display: block !important;
+  }
+
+  .navbar-brand{
     display: block !important;
   }
   /*.col-sm-9, .col-md-10, .main{
@@ -15,12 +27,33 @@
   .dropdown{
     display: none !important;
   }
+
+  .navbar-brand{
+    display: none !important;
+  }
+
+  .navbar-fixed-top{
+     margin-left: 25%;
+  }
+
+  #left-bar{
+	  top: 0 !important;
+    padding: 5px 20px !important;
+  }
+
   /*.main {
       padding-right: 40px !important;
       padding-left: 40px !important;
   }*/
 
 }
+
+@media (min-width: 992px){
+  .navbar-fixed-top{
+     margin-left: 16.66666667%;
+  }
+}
+
 
 @media (min-width: 1025px){
 

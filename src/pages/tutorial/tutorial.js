@@ -15,7 +15,7 @@ function displayCode(param,caller)
 }
 function preCodeFormat(ele)
 {
-  var codeBlocks = ele.querySelectorAll('code');   
+  var codeBlocks = ele.querySelectorAll('code');
   for(var i=0;i<codeBlocks.length;i++)
   {
     var str = codeBlocks[i].innerHTML;
@@ -23,7 +23,7 @@ function preCodeFormat(ele)
     codeBlocks[i].innerHTML = str.replace(new RegExp("^ {" + str.lastIndexOf(" ",str.search(/\S/)) + "}","gm"),"").trim();
   }
 }
-function w3IncludeHTML(funct) 
+function w3IncludeHTML(funct)
 {
   var z, i, a, file, xhttp;
   z = document.getElementsByTagName("*");
@@ -34,9 +34,9 @@ function w3IncludeHTML(funct)
       a = z[i].cloneNode(false);
       file = z[i].getAttribute("w3-include-html");
       var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() 
+      xhttp.onreadystatechange = function()
         {
-          if (xhttp.readyState == 4 && xhttp.status == 200) 
+          if (xhttp.readyState == 4 && xhttp.status == 200)
           {
             a.removeAttribute("w3-include-html");
             a.innerHTML = xhttp.responseText;
@@ -47,7 +47,7 @@ function w3IncludeHTML(funct)
             z[i].parentNode.replaceChild(a, z[i]);
             w3IncludeHTML(funct);
           }
-        }      
+        }
       xhttp.open("GET", file, true);
       xhttp.send();
       return;

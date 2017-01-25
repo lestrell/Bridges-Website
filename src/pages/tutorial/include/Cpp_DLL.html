@@ -32,13 +32,13 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     </code>
   <li>Now link the DLelements together</li>
     <code>
-      e0.setNext(&e1);
-      e1.setNext(&e2);
-      e2.setPrev(&e1);
-      e1.setPrev(&e0);
+      e0.setNext(&e1;);
+      e1.setNext(&e2;);
+      e2.setPrev(&e1;);
+      e1.setPrev(&e0;);
     </code>
   <li>Now we pass the first element of the doubly linked list to Bridges</li>
-    <code>Bridges::setDataStructure(&e0);</code>
+    <code>Bridges::setDataStructure(&e0;);</code>
   <li>Finnaly we call the visualize function</li>
     <code>Bridges::visualize();</code>
 </ul>
@@ -50,7 +50,7 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
     using namespace bridges;
   
     int main()
-    {
+    &#123;
         //create the Bridges object
         Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);
         
@@ -60,15 +60,15 @@ Note that you must  replace the two strings above with your BRIDGES credentials.
         DLelement&lt;int&gt; e2(0, "!");
         
         //link elements
-        e0.setNext(&e1);
-        e1.setNext(&e2);
-        e2.setPrev(&e1);
-        e1.setPrev(&e0);
+        e0.setNext(&e1;);
+        e1.setNext(&e2;);
+        e2.setPrev(&e1;);
+        e1.setPrev(&e0;);
         
         //pass first element of data structure
-        Bridges::setDataStructure(&e0);
+        Bridges::setDataStructure(&e0;);
         
         //visualize data structure
         Bridges::visualize();
-    }
+    &#125;
   </code>
