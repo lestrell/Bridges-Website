@@ -14,7 +14,7 @@ import {Router, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
     <div class="container">
       <h1>Welcome to BRIDGES!</h1>
       <p>Bridging Real-world Infrastructure Designed to Goal-align, Engage, and Stimulate.</p>
-      <p><a class="btn btn-primary btn-lg" href="#/bridges-setup" role="button">Get Started &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#/bridges_setup" role="button">Get Started &raquo;</a></p>
     </div>
   </div>
 
@@ -25,22 +25,22 @@ import {Router, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
           <div class="col-md-3 col-sm-6 col-xs-12">
             <h2>Goal #1</h2>
             <p>Providing easy-to-use interfaces to exciting, engaging real-world data (social networks, scientific data, etc), to make it possible for their use in freshmen/sophomore level CS courses.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <h2>Goal #2</h2>
             <p>Make it easier to visualize the data structures that students create as part of their assignments in algorithms and data structures courses. BRIDGES is carefully designed to augment the student experience in routine introductory courses in Computer Science.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
          </div>
          <div class="col-md-3 col-sm-6 col-xs-12">
             <h2>C++ and Java</h2>
             <p>The BRIDGES toolkit provides a set of classes(C++ and Java are supported) that serve as building blocks to the common CS data structures, including lists (arrays, linked lists), tree structures (general trees, binary trees, binary search trees, AVL trees), graphs (adjacency list and adjacency matrix representations) used in freshmen/sohpomore level computer science.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
              <h2>Engaging Classrooms</h2>
              <p>BRIDGES handles the complex data and web interfaces, thereby letting students focus on the core course materials, while providing a more engaging means to view their output on the web (that can be shared).</p>
-             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+             <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
            </div>
         </div>
 
@@ -99,12 +99,7 @@ export class Index {}
   template: `
   <div class="row content row-87">
   <div class="col-md-2"></div>
-  <!-- <div class="col-md-2 sidenav">
-    <div w3-include-html="./left_sidebar.html"> </div>
-    <script>
-      w3IncludeHTML();
-    </script>
-  </div> -->
+
     <div class="col-md-8 text-left">
     <div>
     <h3 class = "sep_heading">BRIDGES Assignments(UNC Charlotte)</h3>
@@ -331,6 +326,7 @@ export class BridgesEvaluation {}
   template:
   `
   <div class="row content">
+    <div class="col-md-2"></div>
     <div class="col-md-8 text-left row-87">
       <h3 class = "sep_heading">BRIDGES:Getting Started(Setup and running BRIDGES Programs)</h3>
       <p> <i> BRIDGES works with both C++ and Java. Setting up BRIDGES is slightly
@@ -347,22 +343,22 @@ export class BridgesEvaluation {}
                 </li>
                 <li>
                     <b>Using BRIDGES Java with Eclipse
-                        <a href = "#/bridges_setup_java_eclipse">[Detailed Instructions]</a>
+                        <a href = "#/bridges_setup/java_eclipse">[Detailed Instructions]</a>
                     </b>
                 </li>
                 <li>
                     <b>Using BRIDGES Java with BlueJ
-                        <a href = "#/bridges_setup_java_bluej">[Detailed Instructions]</a>
+                        <a href = "#/bridges_setup/java_bluej">[Detailed Instructions]</a>
                     </b>
                 </li>
                 <li>
                     <b>Using BRIDGES Java with IntelliJ
-                        <a href = "#/bridges_setup_java_intellij">[Detailed Instructions]</a>
+                        <a href = "#/bridges_setup/java_intellij">[Detailed Instructions]</a>
                     </b>
                 </li>
                 <li>
                     <b>Using BRIDGES Java with JGrasp
-                        <a href = "#/bridges_setup_java_jgrasp">[Detailed Instructions]</a>
+                        <a href = "#/bridges_setup/java_jgrasp">[Detailed Instructions]</a>
                     </b>
                 </li>
                 <li> Instructions for additional IDEs will be provided soon.</li>
@@ -454,7 +450,7 @@ export class bridges_setup_cxx_xcode{}
   selector: 'bridges-team',
   template:
   `
-  <h2 class="sub-header">Faculty Investigators</h2>
+<h2 class="sub-header">Faculty Investigators</h2>
 <div class="container m-t-md">
   <!-- First row -->
   <div class="row">
@@ -752,7 +748,7 @@ export class ARRAY3D {}
  { path: '/bridges-design',                					component: BridgesDesign			 },
  { path: '/bridges-team',                  					component: BridgesTeam				 },
  { path: '/bridges-eval',                  					component: BridgesEvaluation		 },
- { path: '/bridges-setup',                 					component: BridgesSetup				 },
+ { path: '/bridges_setup',                 					component: BridgesSetup				 },
  { path: '/datasets',  						      	      		component: Datasets					 },
 
  { path: '/tutorial',  										          component: Overview					 },
@@ -770,12 +766,12 @@ export class ARRAY3D {}
  { path: '/tutorial/arrays/3darray',              			component: ARRAY3D					 },
 
 
- { path: '/bridges_setup_cxx_eclipse',              			component: bridges_setup_cxx_eclipse					 },
- { path: '/bridges_setup_cxx_xcode',                			component: bridges_setup_cxx_xcode					 },
- { path: '/bridges_setup_java_bluej',              			component: bridges_setup_java_bluej					 },
- { path: '/bridges_setup_java_eclipse',              			component: bridges_setup_java_eclipse					 },
- { path: '/bridges_setup_java_intellij',              			component: bridges_setup_java_intellij					 },
- { path: '/bridges_setup_java_jgrasp',              			component: bridges_setup_java_jgrasp					 }
+ { path: '/bridges_setup/cxx_eclipse',              			component: bridges_setup_cxx_eclipse					 },
+ { path: '/bridges_setup/cxx_xcode',                			component: bridges_setup_cxx_xcode					 },
+ { path: '/bridges_setup/java_bluej',              			component: bridges_setup_java_bluej					 },
+ { path: '/bridges_setup/java_eclipse',              			component: bridges_setup_java_eclipse					 },
+ { path: '/bridges_setup/java_intellij',              			component: bridges_setup_java_intellij					 },
+ { path: '/bridges_setup/java_jgrasp',              			component: bridges_setup_java_jgrasp					 }
 
 
 
