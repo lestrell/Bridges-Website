@@ -52,7 +52,7 @@ element came before it. So, you CANNOT go backwards.
       <h3>Inside our Main</h3>
       <ul>
         <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
-          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</code>
         Note that you will need to replace the two fields in this call with your BRIDGES credentials. <p>
         <li>Then we can create our SLelements</li>
           <code>
@@ -80,19 +80,38 @@ element came before it. So, you CANNOT go backwards.
               public static void main(String[] args) throws Exception
               &#123;
                   //create the Bridges object
-                  Bridges&lt;String,String&gt; bridge = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
+                  Bridges&lt;String,String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
 
-                  //create elements
-                  SLelement&lt;String&gt; e0 = new SLelement&lt;&gt;("Hello", "");
-                  SLelement&lt;String&gt; e1 = new SLelement&lt;&gt;("World", "");
-                  SLelement&lt;String&gt; e2 = new SLelement&lt;&gt;("!", "");
+                  //create a circular linkedlist
+                  CircSLelement&lt;String&gt; el0 = new CircSLelement&lt;String&gt;("Example", "0");
+              		CircSLelement&lt;String&gt; el1 = new CircSLelement&lt;String&gt;("Of", "1");
+              		CircSLelement&lt;String&gt; el2 = new CircSLelement&lt;String&gt;("A", "2");
+              		CircSLelement&lt;String&gt; el3 = new CircSLelement&lt;String&gt;("Circular", "4");
+              		CircSLelement&lt;String&gt; el4 = new CircSLelement&lt;String&gt;("List", "4");
 
-                  //link elements
-                  e0.setNext(e1);
-                  e1.setNext(e2);
+
+                  CircSLelement&lt;String&gt; tail = el0;
+                  tail = insertFront(tail, el1);
+                  tail = insertFront(tail, el2);
+                  tail = insertFront(tail, el3);
+                  tail = insertFront(tail, el4);
+
+
+                  el0.getLinkVisualizer(el1).setColor("red");
+                  el0.getLinkVisualizer(el1).setThickness(3);
+                  el1.getLinkVisualizer(el2).setColor("green");
+                  el1.getLinkVisualizer(el2).setThickness(3);
+                  el2.getLinkVisualizer(el3).setColor("blue");
+                  el2.getLinkVisualizer(el3).setThickness(3);
+                  el3.getLinkVisualizer(el4).setColor("cyan");
+                  el3.getLinkVisualizer(el4).setThickness(3);
+                  el4.getLinkVisualizer(el0).setColor("magenta");
+                  el4.getLinkVisualizer(el0).setThickness(3);
+
+                  el0.getVisualizer().setColor("red");
 
                   //pass first element of data structure
-                  bridge.setDataStructure(e0);
+                  bridge.setDataStructure(el0);
 
                   //visualize data structure
                   bridge.visualize();
@@ -109,8 +128,8 @@ element came before it. So, you CANNOT go backwards.
         <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
         <li>In your .cpp file, enter the following code snippets:</li>
           <code>
-            #include "SLelement.h"
             #include "Bridges.h"
+            #include "CircSLelement.h"
           </code>
       </ul>
 
@@ -128,26 +147,30 @@ element came before it. So, you CANNOT go backwards.
       <p>
       Note that you must  replace the two strings above with your BRIDGES credentials.
       <p>
-        <li>Then we can create our SLelements</li>
+        <li>Then we can create our CircSLelements</li>
           <code>
-            SLelement&lt;int&gt; e0(0,"Hello");
-            SLelement&lt;int&gt; e1(0,"World");
-            SLelement&lt;int&gt; e2(0,"!");
+            CircSLelement&lt;int&gt; *el0 = new CircSLelement&lt;int&gt;(0, "0");
+            CircSLelement&lt;int&gt; *el1 = new CircSLelement&lt;int&gt;(1, "1");
+            CircSLelement&lt;int&gt; *el2 = new CircSLelement&lt;int&gt;(2, "2");
+            CircSLelement&lt;int&gt; *el3 = new CircSLelement&lt;int&gt;(3, "3");
           </code>
-        <li>Now link the SLelements together</li>
+        <li>Now link the CircSLelements together</li>
           <code>
-            e0.setNext(&e1;);
-            e1.setNext(&e2;);
+            // link nodes
+          	el0-&lt;setNext(el1);
+          	el1-&lt;setNext(el2);
+          	el2-&lt;setNext(el3);
+          	el3-&lt;setNext(el0);
           </code>
-        <li>Now we pass the first element of our singly linked list to Bridges</li>
-          <code>Bridges::setDataStructure(&e0;);</code>
+        <li>Now we pass the first element of our circular singly linked list to Bridges</li>
+          <code>Bridges::setDataStructure(e11);</code>
         <li>Finally we call the visualize function</li>
           <code>Bridges::visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
         <code>
-          #include "SLelement.h"
           #include "Bridges.h"
+          #include "CircSLelement.h"
 
           using namespace bridges;
 
@@ -157,16 +180,19 @@ element came before it. So, you CANNOT go backwards.
               Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",1);
 
               //create elements
-              SLelement&lt;int&gt; e0(0,"Hello");
-              SLelement&lt;int&gt; e1(0,"World");
-              SLelement&lt;int&gt; e2(0,"!");
+              CircSLelement&lt;int&gt; *el0 = new CircSLelement&lt;int&gt;(0, "0");
+            	CircSLelement&lt;int&gt; *el1 = new CircSLelement&lt;int&gt;(1, "1");
+            	CircSLelement&lt;int&gt; *el2 = new CircSLelement&lt;int&gt;(2, "2");
+            	CircSLelement&lt;int&gt; *el3 = new CircSLelement&lt;int&gt;(3, "3");
 
-              //link elements
-              e0.setNext(&e1;);
-              e1.setNext(&e2;);
+              // link nodes
+              el0-&lt;setNext(el1);
+              el1-&lt;setNext(el2);
+              el2-&lt;setNext(el3);
+              el3-&lt;setNext(el0);
 
               //pass first element of data structure
-              Bridges::setDataStructure(&e0;);
+              Bridges::setDataStructure(e11);
 
               //visualize data structure
               Bridges::visualize();

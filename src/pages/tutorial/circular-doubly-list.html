@@ -37,7 +37,7 @@ forwards AND backwards through the linked elements.
         <li>In your .java file, enter the following code snippets:</li>
           <code>
             import bridges.connect.Bridges;
-            import bridges.base.DLelement;
+            import bridges.base.CircDLelement;
           </code>
       </ul>
 
@@ -51,22 +51,21 @@ forwards AND backwards through the linked elements.
       <h3>Inside our Main</h3>
       <ul>
         <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
       <p>
       	Note that you must replace the above strings with your BRIDGES credentials.
       <p>
-        <li>Then we can create our DLelements</li>
+        <li>Then we can create our CircDLelement</li>
           <code>
-            DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
-            DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
-            DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+            CircDLelement&lt;String&gt; e0 = new CircDLelement&lt;&gt;("Hello", "");
+            CircDLelement&lt;String&gt; e1 = new CircDLelement&lt;&gt;("World", "");
+            CircDLelement&lt;String&gt; e2 = new CircDLelement&lt;&gt;("!", "");
           </code>
-        <li>Now link the DLelements together</li>
+        <li>Now insert the CircDLelement into the list.</li>
           <code>
-            e0.setNext(e1);
-            e1.setNext(e2);
-            e2.setPrev(e1);
-            e1.setPrev(e0);
+              CircDLelement<String> tail = el0;
+              tail = insertFront(tail, el1);
+              tail = insertFront(tail, el2);
           </code>
         <li>Now we pass the first element of our datastruture to Bridges</li>
           <code>bridge.setDataStructure(e0);</code>
@@ -76,25 +75,24 @@ forwards AND backwards through the linked elements.
       <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
         <code>
           import bridges.connect.Bridges;
-          import bridges.base.DLelement;
+          import bridges.base.CircDLelement;
 
           public class HelloWorld
           &#123;
               public static void main(String[] args) throws Exception
               &#123;
                   //create the Bridges object
-                  Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
+                  Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
 
                   //create elements
-                  DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
-                  DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
-                  DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+                  CircDLelement&lt;String&gt; e0 = new CircDLelement&lt;&gt;("Hello", "");
+                  CircDLelement&lt;String&gt; e1 = new CircDLelement&lt;&gt;("World", "");
+                  CircDLelement&lt;String&gt; e2 = new CircDLelement&lt;&gt;("!", "");
 
-                  //link elements
-                  e0.setNext(e1);
-                  e1.setNext(e2);
-                  e2.setPrev(e1);
-                  e1.setPrev(e0);
+                  // insert elements into list
+                  CircDLelement&lt;String&gt; tail = el0;
+                  tail = insertFront(tail, el1);
+                  tail = insertFront(tail, el2);
 
                   //pass first element of data structure
                   bridge.setDataStructure(e0);
@@ -115,8 +113,8 @@ forwards AND backwards through the linked elements.
         <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
         <li>In your .cpp file, enter the following code snippets:</li>
           <code>
-            #include "DLelement.h"
             #include "Bridges.h"
+            #include "CircDLelement.h"
           </code>
       </ul>
 
@@ -134,49 +132,64 @@ forwards AND backwards through the linked elements.
       <p>
       Note that you must  replace the two strings above with your BRIDGES credentials.
       <p>
-        <li>Then we can create our DLelements</li>
+        <li>Then we can create our CircDLelements</li>
           <code>
-            DLelement&lt;int&gt; e0(0,"Hello");
-            DLelement&lt;int&gt; e1(0,"World");
-            DLelement&lt;int&gt; e2(0, "!");
+            CircDLelement&lt;int&gt; *el0 = new CircDLelement&lt;int&gt;(0,"Hello");
+            CircDLelement&lt;int&gt; *el1 = new CircDLelement&lt;int&gt;(0,"World");
+            CircDLelement&lt;int&gt; *el2 = new CircDLelement&lt;int&gt;(0, "!");
           </code>
-        <li>Now link the DLelements together</li>
+        <li>Now link the CircDLelements together</li>
           <code>
-            e0.setNext(&e1;);
-            e1.setNext(&e2;);
-            e2.setPrev(&e1;);
-            e1.setPrev(&e0;);
+            //forward links
+            el0.setNext(el1);
+            el1.setNext(el2);
+            el2.setPrev(el3);
+            el1.setPrev(el0);
+
+            //backward links
+            el0.setNext(el3);
+            el1.setNext(el0);
+            el2.setPrev(el1);
+            el1.setPrev(el2);
           </code>
         <li>Now we pass the first element of the doubly linked list to Bridges</li>
-          <code>Bridges::setDataStructure(&e0;);</code>
+          <code>Bridges::setDataStructure(el0);</code>
         <li>Finally we call the visualize function</li>
           <code>Bridges::visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
         <code>
-          #include "DLelement.h"
           #include "Bridges.h"
+          #include "CircDLelement.h"
 
+          using namespace std;
           using namespace bridges;
 
           int main()
           &#123;
               //create the Bridges object
               Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);
+              Bridges::setTitle("An Example Circular Linked List");
 
               //create elements
-              DLelement&lt;int&gt; e0(0,"Hello");
-              DLelement&lt;int&gt; e1(0,"World");
-              DLelement&lt;int&gt; e2(0, "!");
+              CircDLelement&lt;int&gt; *el0 = new CircDLelement&lt;int&gt;(0,"Hello");
+              CircDLelement&lt;int&gt; *el1 = new CircDLelement&lt;int&gt;(0,"World");
+              CircDLelement&lt;int&gt; *el2 = new CircDLelement&lt;int&gt;(0, "!");
 
-              //link elements
-              e0.setNext(&e1;);
-              e1.setNext(&e2;);
-              e2.setPrev(&e1;);
-              e1.setPrev(&e0;);
+              //forward links
+              el0.setNext(el1);
+              el1.setNext(el2);
+              el2.setPrev(el3);
+              el1.setPrev(el0);
+
+              //backward links
+              el0.setNext(el3);
+              el1.setNext(el0);
+              el2.setPrev(el1);
+              el1.setPrev(el2);
 
               //pass first element of data structure
-              Bridges::setDataStructure(&e0;);
+              Bridges::setDataStructure(el0);
 
               //visualize data structure
               Bridges::visualize();

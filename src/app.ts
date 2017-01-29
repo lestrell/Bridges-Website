@@ -325,10 +325,12 @@ export class BridgesEvaluation {}
 
   template:
   `
+  <br>
   <div class="row content">
     <div class="col-md-2"></div>
     <div class="col-md-8 text-left row-87">
       <h3 class = "sep_heading">BRIDGES:Getting Started(Setup and running BRIDGES Programs)</h3>
+      <br>
       <p> <i> BRIDGES works with both C++ and Java. Setting up BRIDGES is slightly
         different , so we provide help pages on building a simple BRIDGES program.
         Currently detailed help pages for using BRIDGES with Eclipse is provided.

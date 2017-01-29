@@ -53,7 +53,7 @@ forwards AND backwards through the linked elements.
       <h3>Inside our Main</h3>
       <ul>
         <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+          <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
       <p>
       	Note that you must replace the above strings with your BRIDGES credentials.
       <p>
@@ -85,7 +85,7 @@ forwards AND backwards through the linked elements.
               public static void main(String[] args) throws Exception
               &#123;
                   //create the Bridges object
-                  Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
+                  Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
 
                   //create elements
                   DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
