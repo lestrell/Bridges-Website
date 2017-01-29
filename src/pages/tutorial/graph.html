@@ -8,26 +8,26 @@
 A graph is a set of vertices connected by edges. Unlike tree structures, a
 vertex can be an ancestor or a child and can have multiple emanating edges.
 In fact, a tree structure is just a special case of a graph.
-<br/><br/><img width="400em" src="./images/Graph.png"/><br/><br/>
+<br><br><img width="400em" src="./images/Graph.png"/><br><br>
 Bridges represents graph structures in one of two ways: either using an
 adjacency list representation or an adjacency matrix representation.
 Access to the vertices is similar to indexing into an array (O(1) complexity).
 The main difference is that vertex ids can be numerical values or strings;
 BRIDGES implements constant access to vertices using maps (in Java and C++).
-<br/><br/>
+<br><br>
 In the adjacency list representation, the GraphAdjList is holding a Map
 of vertices, each  of which associated with a linked list of the vertices
 representing the terminating vertex of the edge. These <i>Edge</i> vertices
 are of type SLElement&lt;E&gt; with the generic object E used to hold the
 vertex id and possibly, edge weight.
-<br/><br/>
+<br><br>
 In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2
 dimensional array to describe which vertices are connected (BRIDGES implements
 this using nested Maps).
 
 Finally these classes provide some convenient methods to add vertices and edges
 (GraphAdjList::addVertex(), GraphAdjList::addEdge()) to build the graph.
-<br/><br/>
+<br><br>
 Typically, the reason to use one version over the other revolves around space
 /time trade offs, end-user application and the density of the graph.
 Since the GraphAdjList representation uses a linked list to track
@@ -42,7 +42,7 @@ considerable amount of space.
 
 <h2>Graph - BRIDGES Example</h2>
 <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
+    <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
 </div>
 <div class="tabContents">

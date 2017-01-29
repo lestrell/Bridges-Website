@@ -11,15 +11,17 @@
                 <br><br> At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a regular Binary Tree Element. The fundamental difference between the two classes is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
                 and holds an additional piece of data, the generic parameter K, called the "key". The key is used to enforce an ordering on the tree structure independent of the element that is being held.
                 <br><br> A typical example would be a binary search tree where all of the keys of the left child are smaller than the keys of the right child.
-                <br/><br/><img width="600em" src="./images/BSTElement.png" /><br/><br/> Notice that the key for BST1 is smaller than the key for the root so it's to the left of the root. Also notice that the key for BST3 is smaller than the key for BST2,
-                but larger than the key for the root. So BST3 sits on the left subtree of BST2, but in the right subtree of the Root.
+                <br><br><img width="600em" src="./images/BSTElement.png" /><br><br>
                 <p>
+                  Notice that the key for BST1 is smaller than the key for the root so it's to the left of the root. Also notice that the key for BST3 is smaller than the key for BST2,
+                but larger than the key for the root. So BST3 sits on the left subtree of BST2, but in the right subtree of the Root.
+                </p>
 
                     <hr>
 
                     <h2>BSTElement - Hello World</h2>
                     <div class="tabs">
-                        <div onclick="displayCode('Java',this)">Java</div>
+                          <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
                         <div onclick="displayCode('cpp',this)">C++</div>
                     </div>
                     <div class="tabContents">
@@ -60,7 +62,7 @@
             </code>
                                 <li>Now we pass the root of our Binary Search Tree to Bridges</li>
                                 <code>bridges.setDataStructure(e0);</code>
-                                <li>Finnaly we visualize the tree </li>
+                                <li>Finally we visualize the tree </li>
                                 <code>bridges.visualize();</code>
                             </ul>
                             <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
@@ -132,7 +134,7 @@
             </code>
                                 <li>Now we pass the first element of our datastruture to Bridges</li>
                                 <code>Bridges::setDataStructure(&e0;);</code>
-                                <li>Finnaly we call the visualize function</li>
+                                <li>Finally we call the visualize function</li>
                                 <code>Bridges::visualize();</code>
                             </ul>
                             <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
@@ -182,21 +184,7 @@
           <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_public">Frame Link</a>
         </p>
       </iframe>
-                        <script>
-                            // var $iframeContents = $("#my-iframe").contents().find(".navbar").css("display","none");
 
-                            // $("#my-iframe").load(function()&#123;
-                            //
-                            //   window.setTimeout(function()&#123;
-                            //     $(".navbar").css("display","none")
-                            //
-                            //   &#125;,1000);
-                            // //   $("#my-iframe").contents().find(".navbar").css("display","none")
-                            // //   // var $iFrameContents = $("#my-iframe").contents();
-                            // //   // var $entryContent = $iFrameContents.find(".assignmentContainer");
-                            // //   // $iFrameContents.find('html').replaceWith($entryContent);
-                            // &#125;);
-                        </script>
                     </div>
                     <p>Well done! You’ve just created your fourth Bridges project!</p>
         </div>

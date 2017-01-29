@@ -12,7 +12,7 @@ DLelement&lt;E&gt; stands for Doubly Linked Element, and is a container
 that has two links,  pointing to two other doubly linked elements. So
 a DLelement&lt;E&gt; “knows” who
 it’s pointing at, AND it knows who pointed at it.
-<br/><br/><img width="600em" src="./images/DLelement.png"/><br/><br/>
+<br><br><img class="img-responsive" src="./images/svg/dl.svg"/><br><br>
 In this example, calling getNext() on DLelement2 will return DLelement3.
 Calling getPrev() on DLelement2 will return DLelement1. DLelement3 does not
 have a next pointer pointing to another DLelement so calling getNext() on
@@ -26,8 +26,8 @@ forwards AND backwards through the linked elements.
 
 <h2>DLelement - BRIDGES Example</h2>
   <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('cpp',this)" >C++</div>
+      <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
+      <div onclick="displayCode('cpp',this)" >C++</div>
   </div>
   <div class="tabContents">
     <div id="Java" class="tab">
@@ -72,7 +72,7 @@ forwards AND backwards through the linked elements.
           </code>
         <li>Now we pass the first element of our datastruture to Bridges</li>
           <code>bridge.setDataStructure(e0);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>bridge.visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
@@ -151,7 +151,7 @@ forwards AND backwards through the linked elements.
           </code>
         <li>Now we pass the first element of the doubly linked list to Bridges</li>
           <code>Bridges::setDataStructure(&e0;);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>Bridges::visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>

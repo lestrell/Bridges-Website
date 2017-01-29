@@ -12,11 +12,11 @@ CircSLelement&lt;E&gt; stands for Circular Singly Linked Element and is a type
 of container that has one link, pointing to another SLelement&lt;E&gt;.
 So an CircSLelement&lt;E&gt; "knows" who it is pointing at but it does not know
 who is pointing at it(if any).
-<br/><br/><img class="img-responsive" width="600em" src="./images/svg/csl.svg"/><br/><br/>
+<br><br><img class="img-responsive" width="600em" src="./images/svg/csl.svg"/><br><br>
 In the above example,  CircSLelement1 points to CircSLelement2. Calling getNext()
 on CircSLelement1 will return  a link to CircSLelement2, and calling getNext() on
 CircSLelement2 will return a link to SLelement3.  CircSLelement3 points to CircSLelement1. Calling getNext() on CircSLelement3 will return a link to CircSLelement1.
-    <br/><br/>
+    <br><br>
 Also notice that there is no getPrev(). CircSLelement2 has no idea what
 element came before it. So, you CANNOT go backwards.
   </p>
@@ -25,8 +25,8 @@ element came before it. So, you CANNOT go backwards.
 
   <h2>CircSLelement - An Example BRIDGES program</h2>
   <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('cpp',this)" >C++</div>
+      <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
+      <div onclick="displayCode('cpp',this)" >C++</div>
   </div>
   <div class="tabContents">
     <div id="Java" class="tab">
@@ -67,7 +67,7 @@ element came before it. So, you CANNOT go backwards.
           </code>
         <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
           <code>bridge.setDataStructure(e0);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>bridge.visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
@@ -141,7 +141,7 @@ element came before it. So, you CANNOT go backwards.
           </code>
         <li>Now we pass the first element of our singly linked list to Bridges</li>
           <code>Bridges::setDataStructure(&e0;);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>Bridges::visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>

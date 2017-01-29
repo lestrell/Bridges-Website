@@ -245,7 +245,7 @@ export class Datasets {}
 			<div><br>
 			<h3 class = "sep_heading">BRIDGES Design</h3><br>
 			<!-- <img src = "./img/bridges_design.jpg" style = "vertical-align:middle"/> -->
-      <img class="img-responsive"  src = "./img/bridges_design.jpg" style = "vertical-align:middle"/>
+      <img class="img-responsive"  src = "./img/bridges_design.jpg" style = "vertical-align:middle; margin:auto !important;"/>
 			</div>
 			<p> </p>
       <hr>
@@ -464,7 +464,7 @@ export class bridges_setup_cxx_xcode{}
           <p class="card-text">Charlotte Visualization Center<br>
             Department of Computer Science<br>
             The University of North Carolina at Charlotte<br>
-            email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+            email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br><br> </p>
           </div>
         </article><!-- .end Card -->
       </div>
@@ -479,7 +479,7 @@ export class bridges_setup_cxx_xcode{}
             <p class="card-text">Charlotte Visualization Center<br>
               Department of Computer Science<br>
               The University of North Carolina at Charlotte<br>
-              email: <a href = "mailto:krs@uncc.edu">payton@uncc.edu</a><br> </p>
+              email: <a href = "mailto:krs@uncc.edu">payton@uncc.edu</a><br><br> </p>
             </div>
           </article><!-- .end Card -->
         </div>
@@ -489,12 +489,11 @@ export class bridges_setup_cxx_xcode{}
           <article class="card animated fadeInLeft">
             <img width="300" height="300" class="card-img-top img-responsive" src="./img/michael.jpg" alt="Deer in nature" />
             <div class="card-block">
-              <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-              <h6 class="text-muted">Associate Professor</h6>
-              <p class="card-text">Charlotte Visualization Center<br>
-                Department of Computer Science<br>
-                The University of North Carolina at Charlotte<br>
-                email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+              <h4 class="card-title">Dr. Michael Youngblood</h4>
+              <h6 class="text-muted">Senior AI Systems Architect and Researcher</h6>
+              <p class="card-text">Interactive Intelligence Area<br>
+                                   PARC, a Xerox company<br>
+                                   email: <a href = "mailto:gmyoungblood@uncc.edu">gmyoungblood@uncc.edu</a><br><br><br> </p>
               </div>
             </article><!-- .end Card -->
           </div>
@@ -504,12 +503,10 @@ export class bridges_setup_cxx_xcode{}
             <article class="card animated fadeInLeft">
               <img width="300" height="300" class="card-img-top img-responsive" src="./img/robert.png" alt="Deer in nature" />
               <div class="card-block">
-                <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-                <h6 class="text-muted">Associate Professor</h6>
-                <p class="card-text">Charlotte Visualization Center<br>
-                  Department of Computer Science<br>
-                  The University of North Carolina at Charlotte<br>
-                  email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+                <h4 class="card-title">Dr. Robert Kosara</h4>
+                <h6 class="text-muted">Tableau Software</h6>
+                <p class="card-text">Seattle, Washington<br>
+                  email: <a href = "mailto:rkosara@uncc.edu">rkosara@uncc.edu</a><br><br> </p>
                 </div>
               </article><!-- .end Card -->
             </div>
@@ -519,12 +516,10 @@ export class bridges_setup_cxx_xcode{}
               <article class="card animated fadeInLeft">
                 <img width="300" height="300" class="card-img-top img-responsive" src="./img/paula.jpg" alt="Deer in nature" />
                 <div class="card-block">
-                  <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-                  <h6 class="text-muted">Associate Professor</h6>
-                  <p class="card-text">Charlotte Visualization Center<br>
-                    Department of Computer Science<br>
-                    The University of North Carolina at Charlotte<br>
-                    email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+                  <h4 class="card-title">Dr. Paula Gookasian</h4>
+                  <h6 class="text-muted">Department of Psychology</h6>
+                  <p class="card-text">The University of North Carolina at Charlotte<br>
+                    email: <a href = "mailto:pagoolka@uncc.edu">pagoolka@uncc.edu</a><br><br> </p>
                   </div>
                 </article><!-- .end Card -->
               </div>
@@ -546,12 +541,12 @@ export class bridges_setup_cxx_xcode{}
                 <article class="card animated fadeInLeft">
                   <img width="300" height="300" class="card-img-top img-responsive" src="./img/burlinson.jpg" alt="Deer in nature" />
                   <div class="card-block">
-                    <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-                    <h6 class="text-muted">Associate Professor</h6>
+                    <h4 class="card-title">David Burlinson</h4>
+                    <h6 class="text-muted">PhD student</h6>
                     <p class="card-text">Charlotte Visualization Center<br>
                       Department of Computer Science<br>
                       The University of North Carolina at Charlotte<br>
-                      email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+                      email: <a href = "mailto:dburlins@uncc.edu">dburlins@uncc.edu</a><br> </p>
                     </div>
                   </article><!-- .end Card -->
                 </div>
@@ -562,12 +557,12 @@ export class bridges_setup_cxx_xcode{}
                   <article class="card animated fadeInLeft">
                     <img width="300" height="300" class="card-img-top img-responsive" src="./img/mmehedint.jpg" alt="Deer in nature" />
                     <div class="card-block">
-                      <h4 class="card-title">	Dr. Jamie Payton </h4>
-                      <h6 class="text-muted">Associate Professor</h6>
+                      <h4 class="card-title">Mihai Mehedint</h4>
+                      <h6 class="text-muted">BS student</h6>
                       <p class="card-text">Charlotte Visualization Center<br>
                         Department of Computer Science<br>
                         The University of North Carolina at Charlotte<br>
-                        email: <a href = "mailto:krs@uncc.edu">payton@uncc.edu</a><br> </p>
+                        email: <a href = "mailto:mmehedin@uncc.edu">mmehedin@uncc.edu</a><br> </p>
                       </div>
                     </article><!-- .end Card -->
                   </div>
@@ -578,12 +573,12 @@ export class bridges_setup_cxx_xcode{}
                     <article class="card animated fadeInLeft">
                       <img width="300" height="300" class="card-img-top img-responsive" src="./img/dakota.jpg" alt="Deer in nature" />
                       <div class="card-block">
-                        <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-                        <h6 class="text-muted">Associate Professor</h6>
+                        <h4 class="card-title">Dakota Carmer</h4>
+                        <h6 class="text-muted">BS student</h6>
                         <p class="card-text">Charlotte Visualization Center<br>
                           Department of Computer Science<br>
                           The University of North Carolina at Charlotte<br>
-                          email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+                          email: <a href = "mailto:dcarmer@uncc.edu">dcarmer@uncc.edu</a><br> </p>
                         </div>
                       </article><!-- .end Card -->
                     </div>
@@ -603,12 +598,12 @@ export class bridges_setup_cxx_xcode{}
                   <article class="card animated fadeInLeft">
                     <img width="300" height="300" class="card-img-top img-responsive" src="./img/stephen.jpg" alt="Deer in nature" />
                     <div class="card-block">
-                      <h4 class="card-title">Dr. Kalpathi Subramanian</h4>
-                      <h6 class="text-muted">Associate Professor</h6>
+                      <h4 class="card-title">Stephen Macneil</h4>
+                      <h6 class="text-muted">PhD student</h6>
                       <p class="card-text">Charlotte Visualization Center<br>
-                        Department of Computer Science<br>
+                        Department of Sofware and Inf. Systems<br>
                         The University of North Carolina at Charlotte<br>
-                        email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> </p>
+                        email: <a href = "mailto:smacneil01@gmail.com">smacneil01@gmail.com</a><br> </p>
                       </div>
                     </article><!-- .end Card -->
                   </div>
@@ -622,12 +617,12 @@ export class bridges_setup_cxx_xcode{}
                     <article class="card animated fadeInLeft">
                       <img width="300" height="300" class="card-img-top img-responsive" src="./img/sean.jpeg" alt="Deer in nature" />
                       <div class="card-block">
-                        <h4 class="card-title">	Dr. Jamie Payton </h4>
-                        <h6 class="text-muted">Associate Professor</h6>
+                        <h4 class="card-title">Sean Gallagher</h4>
+                        <h6 class="text-muted">PhD student</h6>
                         <p class="card-text">Charlotte Visualization Center<br>
                           Department of Computer Science<br>
                           The University of North Carolina at Charlotte<br>
-                          email: <a href = "mailto:krs@uncc.edu">payton@uncc.edu</a><br> </p>
+                          email: <a href = "mailto:sgalla19@uncc.edu">sgalla19@uncc.edu</a><br> </p>
                         </div>
                       </article><!-- .end Card -->
                     </div>

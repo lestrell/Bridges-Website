@@ -1,3 +1,7 @@
+.tutorial-active-language-tab{
+		color: white !important;
+		background-color: grey !important;
+}
 @media (max-width: 768px){
 	.nav-tutorial	{
 		margin: -15px 0px 21px -34px !important;
@@ -79,7 +83,7 @@ body > *:not(script)
 .nav-tutorial
 {
   background-color: #3498db;
-	font-size: 12px;
+	font-size: 14px !important;
 	display:inline-block;
 	width:100%;
 }
@@ -175,6 +179,8 @@ body > *:not(script)
 	padding: 0em 2em;
 	border: 1px solid #999;
 }
+
+
 /*.main-tutorial *.tabContents > *
 {
 	display:none;

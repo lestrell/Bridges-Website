@@ -16,6 +16,8 @@ $(function(){
 
 
 function onLoadAndHashChange(){
+    //workaround, lazy, to add this class to all images, later will be done manually.
+    $("img").addClass("img-responsive");
 
     $("li.active").removeClass("active");
     $("a.active").removeClass("active");
@@ -60,6 +62,12 @@ function displayCode(param,caller)
   console.log(param);
   $(".tab").css("display","none");
   $("#"+param).css("display","block");
+
+  // $(".main-tutorial.tabs.active").removeClass("active");
+  $(".tabs div").removeClass("tutorial-active-language-tab");
+  $(caller).addClass("tutorial-active-language-tab");
+
+
   // var tabs = document.querySelectorAll("*.tabs > *");
   // console.log(tabs);
   // for(var i=0;i<tabs.length;i++)

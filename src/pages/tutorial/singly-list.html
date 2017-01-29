@@ -5,14 +5,14 @@
   <div class="main-tutorial">
     SLelement&lt;E&gt; implements a <i>doubly linked list</i> in BRIDGES and is
 inherited from Element&lt;E&gt;
-<br><br><img width="175em" src="./images/slelement-cd.png"><br><br>
+<br><br><img class="img-responsive" src="./images/svg/sl.svg"><br><br>
   <h2>How does the SLelement&lt;E&gt; work?</h2>
   <p>
 SLelement&lt;E&gt; stands for Singly Linked Element and is a type
 of container that has one link, pointing to another SLelement&lt;E&gt;.
 So an SLelement&lt;E&gt; "knows" who it is pointing at but it does not know
 who is pointing at it(if any).
-<br/><br/><img width="600em" src="./images/SLelement.png"/><br/><br/>
+<br><br><img width="600em" src="./images/SLelement.png"/><br><br>
 In the above example,  SLelement1 points to SLelement2. Calling getNext()
 on SLelement1 will return  a link to SLelement2, and calling getNext() on
 SLelement2 will return a link to SLelement3.  SLelement3 is not pointing
@@ -20,7 +20,7 @@ to another SLelement so calling getNext() on SLelement3 will return NULL.
 This is desirable since you will know that you have reached the end of the
 singly linked list (as NULL is a unique value and not  a legal memory address
 for an object).
-    <br/><br/>
+    <br><br>
 Also notice that there is no getPrev(). SLelement2 has no idea what
 element came before it. So, you CANNOT go backwards.
   </p>
@@ -29,7 +29,7 @@ element came before it. So, you CANNOT go backwards.
 
   <h2>SLelement - An Example BRIDGES program</h2>
   <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
+    <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('cpp',this)" >C++</div>
   </div>
   <div class="tabContents">
@@ -71,7 +71,7 @@ element came before it. So, you CANNOT go backwards.
           </code>
         <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
           <code>bridge.setDataStructure(e0);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>bridge.visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
@@ -145,7 +145,7 @@ element came before it. So, you CANNOT go backwards.
           </code>
         <li>Now we pass the first element of our singly linked list to Bridges</li>
           <code>Bridges::setDataStructure(&e0;);</code>
-        <li>Finnaly we call the visualize function</li>
+        <li>Finally we call the visualize function</li>
           <code>Bridges::visualize();</code>
       </ul>
       <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
