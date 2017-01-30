@@ -60,7 +60,7 @@ import {Router, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
               <p class="lead">A singly linked list using a reduced version of the IMDB actor/movie dataset(Click on the image to see the live visualization).</p>
             </div>
             <div class="col-md-5">
-              <img class="featurette-image img-responsive center-block" src="http://bridgesuncc.github.io/img/list.png" alt="Generic placeholder image">
+              <img class="featurette-image img-responsive center-block" src="https://bridgesuncc.github.io/img/list.png" alt="Generic placeholder image">
             </div>
           </div>
 
@@ -72,7 +72,7 @@ import {Router, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
               <p class="lead">Bacon Number and Path Computation using the IMDB actor/movie dataset. Example illustrates the path between Kevin Bacon and Denzel Washington (Click on the image to see the live visualization).</p>
             </div>
             <div class="col-md-5 col-md-pull-7">
-              <img class="featurette-image img-responsive center-block" src="http://bridgesuncc.github.io/img/graph2.png" alt="Generic placeholder image">
+              <img class="featurette-image img-responsive center-block" src="https://bridgesuncc.github.io/img/graph2.png" alt="Generic placeholder image">
             </div>
           </div>
 
@@ -84,7 +84,7 @@ import {Router, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
               <p class="lead">A binary search tree built using earthquake magnitudes; data from the USGIS earthquake feed(periodically retrieved and stored on server, so as to always access the most recent quakes). (Click on the image to see the live visualization).</p>
             </div>
             <div class="col-md-5">
-              <img class="featurette-image img-responsive center-block" src="http://bridgesuncc.github.io/img/tree.png" alt="Generic placeholder image">
+              <img class="featurette-image img-responsive center-block" src="https://bridgesuncc.github.io/img/tree.png" alt="Generic placeholder image">
             </div>
           </div>
 
@@ -199,7 +199,7 @@ export class Assignments {}
     on-demand streaming data; some of the older datasets that
     were held in files are included below in their original
     form. Currently ongoing effort to access
-    <a href="http://think.cs.vt.edu/corgis/"> Corgis Datasets</a>, 				via BRIDGES.  </i></p>
+    <a href="https://think.cs.vt.edu/corgis/"> Corgis Datasets</a>, 				via BRIDGES.  </i></p>
       <ul style = "list-style-type:circle">
         <li> <a href = "./project_data/datasets/large_imdb.txt">
           Curated IMDB (Actor/Movie) Data</a></li>
@@ -207,21 +207,21 @@ export class Assignments {}
             (Accessed in a sane manner as a list of objects via
             the BRIDGES API)
             <a href =
-            "http://earthquakes-uncc.herokuapp.com/eq/latest/100">
+            "https://earthquakes-uncc.herokuapp.com/eq/latest/100">
             Example command to retrieve 100 most  recent
             earthquake Tweets</a>"</li>
             <li> Video Game Review Data (extracted via BRIDGES API)
-              <a href ="http://bridgesdata.herokuapp.com/api/games">
+              <a href ="https://bridgesdata.herokuapp.com/api/games">
                 Example query to retrieve Video Game Review Data</a></li>
                 <li> Shakespeare Books, Plays, Poems (Metadata only)
                   (Accessed in a sane manner as a list of objects via
                   the BRIDGES API)
-                  <a href="http://bridgesdata.herokuapp.com/api/shakespeare/">
+                  <a href="https://bridgesdata.herokuapp.com/api/shakespeare/">
                     Example query to retrieve Video Game Review Data</a></li>
                     <li> Books
                       (Accessed in a sane manner as a list of objects via
                       the BRIDGES API)
-                      <a href = "http://bridgesdata.herokuapp.com/api/books/">
+                      <a href = "https://bridgesdata.herokuapp.com/api/books/">
                         Example query to retrieve Book Data</a></li>
                       </ul>
                     </div>
