@@ -16,6 +16,12 @@ $(function(){
 
 
 function onLoadAndHashChange(){
+    setTimeout(function(){
+      PR.prettyPrint()
+    },1000);
+
+
+
     //workaround, lazy, to add this class to all images, later will be done manually.
     $("img").addClass("img-responsive");
 
